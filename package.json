@@ -15,7 +15,7 @@
     ""
   ],
   "authors": "Jean-Philippe Beaudet <jpbeaudet@s3r3nity.com> ",
-  "license": "GPL 3.0",
+  "license": "GNU 3.0",
   "dependencies": {
     "express": "~4.0.0",
     "express-session": "1.13.0",

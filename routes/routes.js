@@ -2,7 +2,7 @@
 //
 // AppTemplate
 // Version : 0.0.1
-// License: 
+// License: GNU 3.0 General Public License
 //
 
 var index = require('../routes/index');
