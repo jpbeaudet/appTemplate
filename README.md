@@ -1,22 +1,32 @@
 # appTemplate
-Boiler plate hello world server for express4, node.js, mongodb(mongoose), passport
+Boiler plate hello world server using express4, node.js, mongodb(mongoose), passport and bootstrap3
+
+## Features:
+Pre-installed and functional:
+* Login/register with passport local 
+* Boostrap3 responsive
+* Jade templating
+* Routing structure
+* jQuery file ready to edit (/app)
+* Mongoose user collection and mongodb connector
+* Express4 Sessions
 
 ## installation:
 `
 npm install
 `
 
-then
+##### modify the config.js to match your port hot and db name
 
-modify the config.js to match your port hot and db name
-
-start mongodb 
-
-then
-	
+##### start mongodb
+`
+mongod
+`
+##### Then type
 `
 node app.js
 `
+
 ## License: 
 GNU 3.0 General Public License
 
