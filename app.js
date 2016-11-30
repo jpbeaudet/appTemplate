@@ -31,13 +31,14 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(require('express-session')({
-    secret: '##44#35?',
+    secret: '<your_secret>',
     resave: false,
     saveUninitialized: false
 }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
+// to separate jquery files
 app.use(express.static(path.join(__dirname, 'app')));
 
 // routes
