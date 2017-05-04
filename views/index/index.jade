@@ -5,11 +5,68 @@ block content
     center
      .panel.panel-default
        .panel-heading
-         h3.panel-title AppTemplate v0.1
+         h3.panel-title Files
        .panel-body
-         | Hello World !
-        
+         .container-fluid
+           span#map
+         .container-fluid
+           span#sections
+           br
+           a#back(href="#", hidden="true") Back
+     .panel.panel-default
+       .panel-heading
+         h3.panel-title Inbox
+       .panel-body
+         .container-fluid
+           span#inbox  
+     .panel.panel-default
+       .panel-heading
+         h3.panel-title Search Files
+       .panel-body
+         .container-fluid
+           form#search
+             .form-group
+               label(for='exampleTextarea') Enter Search
+               textarea#exampleTextarea.form-control(rows='2')
+             button.btn-block.btn-primary(type='submit') Search
+             br
+             .container-fluid
+               span#results
+     .panel.panel-default
+       .panel-heading
+         h3.panel-title Search Inbox
+       .panel-body
+         .container-fluid
+           form#search_inbox
+             .form-group
+               label(for='exampleTextarea') Enter Search
+               textarea#exampleTextarea2.form-control(rows='2')
+             button.btn-block.btn-primary(type='submit') Search
+             br
+             .container-fluid
+               span#results2
+             
+     .panel.panel-default
+       .panel-heading
+         h3.panel-title Upload file
+       .panel-body
+         .container-fluid
+           form
+             .form-group
+               label(for='exampleInputFile') File input
+               input#exampleInputFile.form-control-file(type='file', aria-describedby='fileHelp')
+               small#fileHelp.form-text.text-muted
+                 | Upload file tester 
+             button.btn.btn-primary(type='submit') Upload 
   // jQuery (necessary for Bootstrap's JavaScript plugins)
   script(src='/js/jquery.min.js')
   // Include all compiled plugins (below), or include individual files as needed
   script(src='/js/bootstrap.min.js')
+  // Include all compiled plugins (below), or include individual files as needed
+  // load
+  script(type='text/javascript').
+    var map = !{JSON.stringify(map)}
+  script(type='text/javascript').
+    var inbox = !{JSON.stringify(inbox)}
+    
+  script(src='/js/nav.js')
