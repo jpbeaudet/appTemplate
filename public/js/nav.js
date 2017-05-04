@@ -247,7 +247,15 @@ $(document).ready(function(){
 	sections.push('<a href="#" class="folder" name="'+nav_test.map.sections[i]+'"><i class="fa fa-folder fa-lg"></i>&nbsp'+nav_test.map.sections[i]+'</a><br>')
  } 
  $("#sections").html(sections.join(""))
- $(".folder").click(function(){
+ $('body').on('click', '#back', function() {
+	$("#back").hide()
+	var sections =[]
+	for (var i = 0; i < nav_test.map.sections.length; i++) {
+		sections.push('<a href="#" class="folder" name="'+nav_test.map.sections[i]+'"><i class="fa fa-folder fa-lg"></i>&nbsp'+nav_test.map.sections[i]+'</a><br>')
+	} 
+ $("#sections").html(sections.join(""))
+ });
+ $('body').on('click', '.folder', function() {
 	var files =[]
 	var section = $(this).attr('name')
 	$(".folder").each(function(){
@@ -295,14 +303,7 @@ $(document).ready(function(){
 	}
 	$("#sections").html(files.join(""))
 });
- $("#back").click(function(){
-	$("#back").hide()
-	var sections =[]
-	for (var i = 0; i < nav_test.map.sections.length; i++) {
-		sections.push('<a href="#" class="folder" name="'+nav_test.map.sections[i]+'"><i class="fa fa-folder fa-lg"></i>&nbsp'+nav_test.map.sections[i]+'</a><br>')
-	} 
- $("#sections").html(sections.join(""))
- });
+
  
  /*!
  * -- Navigation --
